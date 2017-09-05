@@ -1,0 +1,13 @@
+.image
+{
+  max-width: 300px;
+  max-height: 300px;
+  padding: 20px;
+  border: solid 1px;
+  margin-top: 20px;
+  margin-left: 230px;
+  margin-right: 230px;
+}
+.front {
+  display: none;
+}
