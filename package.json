@@ -7,7 +7,9 @@
     "gulp": "^3.9.1"
   },
   "devDependencies": {
+    "browserify": "^14.4.0",
     "del": "^3.0.0",
+    "gulp": "^3.9.1",
     "gulp-jshint": "^2.0.4",
     "gulp-uglify": "^3.0.0",
     "gulp-util": "^3.0.8",
@@ -19,5 +21,13 @@
   },
   "author": "",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/parulmishra/MemoryJs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/parulmishra/MemoryJs/issues"
+  },
+  "homepage": "https://github.com/parulmishra/MemoryJs#readme",
   "description": ""
 }

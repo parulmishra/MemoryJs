@@ -2,28 +2,31 @@ var clicks = 0;
 var firstChoice = 0;
 var secondChoice = 0;
 var isFlipped = false;
-var cards = {};
-cards[1] = "img/image1.jpeg";
-cards[2] = "img/image2.jpg";
-cards[3] = "img/image3.jpg";
-cards[4] = "img/image4.jpg";
-cards[5] = "img/image5.jpg";
-cards[6] = "img/image1.jpeg";
-cards[7] = "img/image2.jpg";
-cards[8] = "img/image3.jpg";
-cards[9] = "img/image4.jpg";
-cards[10] = "img/image5.jpg";
+var cards = [];
+cards[0] = "img/image1.jpeg";
+cards[1] = "img/image2.jpg";
+cards[2] = "img/image3.jpg";
+cards[3] = "img/image4.jpg";
+cards[4] = "img/image5.jpg";
 
-// function random(concat)
-// {
-//    document.getElementById("demo").innerHTML = (concat);
-// }
-// for(var i = 0; i<cards.length; i++)
-// {
-//   var rand = Math.floor(Math.random(concat) * cards.length);
-//
-//   var concat = cards[rand];
-// }
+randomImageGenerator = function()
+{
+	console.log("Amar " + cards.length);
+   for(var i = 0; i<=cards.length; i++)
+   {
+	   console.log("Amar" + i);
+     var rand = Math.floor(Math.random() * cards.length);
+	 document.getElementById("demo").innerHTML += "<div class='card'>\
+        <!--<input type='hidden' value='img/image1.jpg'>-->\
+        <div class='front'>\
+          <img src=" + cards[rand] + " class='image'>\
+        </div>\
+        <div class='back'>\
+          <img src='img/backimage.png' class='image'>\
+        </div>\
+      </div>";
+   }
+};
 function Memory(card1 , card2)
 {
   this.card1 = card1;
@@ -39,12 +42,12 @@ choose = function(card)
     clicks = 0;
     return (firstChoice == secondChoice);
   }
-  else (clicks == 0)
+  else if(clicks == 0)
   {
     firstChoice = card;
     clicks++;
   }
-}
+};
 Memory.prototype.matchCards = function(card1, card2)
 {
   if(card1 === card2)
@@ -84,3 +87,4 @@ Memory.prototype.matchCards = function(card1, card2)
 //};
 exports.memoryModule = Memory;
 exports.chooseModule = choose;
+exports.randomModule = randomImageGenerator;
